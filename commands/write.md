@@ -24,7 +24,11 @@ Read ALL of the following from the Obsidian vault via MCP before writing any pro
 7. **World-building rules** — Read any relevant magic system, faction, or history notes that apply to this chapter
 8. **Research briefs** — Read all research briefs from `Research/` where the `relevance` field links to characters, locations, or systems appearing in this chapter. Also load any briefs where the `chapters` field includes this chapter number. Use these for factual accuracy, authentic details, and genre-appropriate prose.
 
-If any critical context is missing (e.g., no voice profile for the POV character), stop and tell the writer. Suggest running `/novel-character` first.
+**Pre-flight checks — stop and tell the writer if:**
+- Novel State phase is earlier than `validated` — warn that pre-writing validation hasn't been run and suggest `/novel-validate`. Allow the writer to proceed anyway if they choose.
+- No voice profile for the POV character → suggest `/novel-character`
+- No location note for the scene's setting → suggest `/novel-world`
+- No beat sheet entry for this chapter → suggest `/novel-outline`
 
 ## Step 3: Present Approach
 

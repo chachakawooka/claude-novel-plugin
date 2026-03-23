@@ -99,7 +99,7 @@ if [ -d "$VAULT_PATH/Critique" ]; then
       chapter_name=$(basename "$critique_dir")
       ledger="$critique_dir/approval-ledger.json"
       if [ -f "$ledger" ]; then
-        stages_done=$(grep -o '"stages_completed": *[0-9]*' "$ledger" | grep -o '[0-9]*' || echo "0")
+        stages_done=$(python3 -c "import json,sys; print(json.load(open(sys.argv[1])).get('stages_completed',0))" "$ledger" 2>/dev/null || grep -o '"stages_completed": *[0-9]*' "$ledger" 2>/dev/null | grep -o '[0-9]*' || echo "0")
         echo "  $chapter_name — stages completed: $stages_done/5"
       else
         echo "  $chapter_name — not started"

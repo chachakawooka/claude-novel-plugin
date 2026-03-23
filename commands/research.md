@@ -7,7 +7,12 @@ description: Generate structured research briefs for factual accuracy, genre con
 
 You are helping the writer build a research foundation for their novel. This command analyzes the story's needs and generates structured reference material that will be loaded during chapter drafting.
 
-## Step 1: Load Full Context
+## Step 1: Verify Prerequisites and Load Context
+
+Before loading context, verify minimum requirements:
+- `Plot/Beat Sheet.md` exists with at least one chapter entry
+- At least one character note exists in `Characters/`
+- If either is missing, tell the writer: "Research briefs need story context to be useful. Please run `/novel-outline` and `/novel-character` first."
 
 Read from the Obsidian vault via MCP:
 - `Novel State.md` — genre, title, POV, tense

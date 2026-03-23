@@ -21,7 +21,7 @@ Scope narrows each stage. Earlier stages' changes are LOCKED via the approval le
 
 Ask the writer which chapter to critique. Then:
 
-1. Read the chapter from `Manuscript/` via MCP
+1. Read the chapter from `Manuscript/` via MCP. If the chapter doesn't exist, tell the writer and list available chapters. If the chapter's status is not `draft` (i.e., it's already in critique), ask: "This chapter is at stage {N}. Re-run this stage, continue to the next, or start over?"
 2. Read all relevant context:
    - POV character note (especially Voice section)
    - All characters in the scene
