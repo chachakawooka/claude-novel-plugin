@@ -73,9 +73,9 @@ For each major storyline, create a separate note in `Plot/`:
 ```yaml
 ---
 type: plot-thread
-status: active
-introduced: {chapter number}
-resolved:
+status: active | resolved | stalled
+introduced: {chapter number where thread first appears, integer}
+resolved: {chapter number where thread resolves, integer — leave empty if unresolved}
 importance: major | minor | subplot
 ---
 ```

@@ -116,7 +116,7 @@ Body sections:
 
 Save each brief to `Research/{Topic Name}.md` via MCP.
 
-Naming convention: descriptive, hyphenated (e.g., `Research/Medieval Siege Warfare.md`, `Research/Grief and Loss.md`, `Research/Herbalism and Healing.md`).
+Naming convention: descriptive, space-separated (e.g., `Research/Medieval Siege Warfare.md`, `Research/Grief and Loss.md`, `Research/Herbalism and Healing.md`).
 
 ## Step 6: Cross-Reference
 

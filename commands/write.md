@@ -94,7 +94,9 @@ emotional-beat: {emotional arc description}
 
 ## Step 7: Transition
 
-After saving, tell the writer:
-- Word count for the chapter
-- Which plot threads were advanced
-- Suggest next steps: draft the next chapter, or run `/novel-critique` on this one
+After saving:
+- If this is the first chapter drafted, update `Novel State.md` phase to `drafting`
+- Tell the writer:
+  - Word count for the chapter
+  - Which plot threads were advanced
+  - Suggest next steps: draft the next chapter, or run `/novel-critique` on this one

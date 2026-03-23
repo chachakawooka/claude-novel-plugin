@@ -230,9 +230,10 @@ After implementation passes:
 ### Stage 5 Special Handling
 
 Stage 5 has NO implementation phase. After judges vote:
-- Record which findings are validated (real issues) vs. rejected (false positives)
-- Write findings to `Critique/Chapter-{NN}/Stage-5/validated-findings.json`
-- These go to the writer for manual review
+- Judges vote on Stage 5 findings using the same protocol: APPROVE = finding is a real continuity issue, REJECT = false positive, MODIFY = real issue but recommendation needs adjustment
+- Record which findings are validated (2+ APPROVE) vs. rejected (2+ REJECT)
+- Write validated findings to `Critique/Chapter-{NN}/Stage-5/validated-findings.json`
+- These go to the writer for manual review — continuity fixes require creative judgment
 
 ## Step 4: Generate Summary
 
@@ -266,6 +267,8 @@ Chapter status: approved
 ```
 
 Save via MCP and update the chapter frontmatter `status` to `approved`.
+
+Update `Novel State.md` phase to `critique` if not already set.
 
 ## Step 5: Present to Writer
 

@@ -137,6 +137,8 @@ Body sections:
 
 ### Scene Template (`Templates/Scene Template.md`)
 
+Note: Each chapter file uses `type: scene` for Dataview querying. A chapter may contain multiple scenes, but is stored as a single file.
+
 ```yaml
 ---
 type: scene
@@ -326,9 +328,10 @@ SORT priority ASC
 
 ### Critique Pipeline
 ```dataview
-TABLE stages-completed, status
-FROM "Critique"
-SORT file.name ASC
+TABLE status, chapter, act
+FROM "Manuscript"
+WHERE type = "scene" AND status != "draft"
+SORT chapter ASC
 ```
 ````
 

@@ -240,5 +240,5 @@ The writer can:
 - **"Skip Stage {A|B|C}"** — Skip a stage
 - **"Focus on {area}"** — Ask validators to prioritize specific concerns
 - **"Dismiss finding {ID}"** — Override a validated finding (creative choice)
-- **"Re-run validation"** — After making fixes, run the full pipeline again
+- **"Re-run validation"** — After making fixes, run the full pipeline again. Previous results in `Critique/Pre-Writing/` are archived (renamed with timestamp suffix) before generating fresh results
 - **"Proceed anyway"** — Override NOT READY status (the writer has final say)

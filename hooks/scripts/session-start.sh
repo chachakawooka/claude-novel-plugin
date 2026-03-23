@@ -69,6 +69,28 @@ if [ -d "$VAULT_PATH/Characters" ]; then
 fi
 echo ""
 
+# Show pre-writing foundation status
+echo "--- Pre-Writing Foundation ---"
+if [ -f "$VAULT_PATH/Plot/Concept.md" ]; then
+  echo "  Ideation: completed"
+else
+  echo "  Ideation: not started (run /novel-ideate)"
+fi
+
+research_count=0
+if [ -d "$VAULT_PATH/Research" ]; then
+  research_count=$(find "$VAULT_PATH/Research" -name "*.md" -type f 2>/dev/null | wc -l)
+fi
+echo "  Research briefs: $research_count"
+
+if [ -f "$VAULT_PATH/Critique/Pre-Writing/readiness-report.md" ]; then
+  readiness=$(grep -m1 "^## Readiness Status" -A1 "$VAULT_PATH/Critique/Pre-Writing/readiness-report.md" 2>/dev/null | tail -1 | tr -d '[:space:]')
+  echo "  Validation: ${readiness:-unknown}"
+else
+  echo "  Validation: not run (run /novel-validate)"
+fi
+echo ""
+
 # Show critique pipeline progress
 echo "--- Critique Pipeline ---"
 if [ -d "$VAULT_PATH/Critique" ]; then

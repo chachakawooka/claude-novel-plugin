@@ -179,7 +179,7 @@ Body sections:
 ## Step 10: Update Novel State
 
 Update `Novel State.md`:
-- Change `phase` to `ideation`
+- Ensure `phase` is `ideation` (it should already be if `/novel-init` was run)
 
 Tell the writer:
 - Summary of what was generated
