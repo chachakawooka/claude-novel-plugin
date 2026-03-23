@@ -1,0 +1,19 @@
+{
+  "hooks": [
+    {
+      "event": "SessionStart",
+      "script": "hooks/scripts/session-start.sh",
+      "description": "Load novel vault context at session start"
+    },
+    {
+      "event": "Stop",
+      "script": "hooks/scripts/session-end.sh",
+      "description": "Update session timestamp on exit"
+    },
+    {
+      "event": "PreCompact",
+      "script": "hooks/scripts/pre-compact.sh",
+      "description": "Preserve critical novel state during context compaction"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "novel-studio",
+  "version": "1.0.0",
+  "description": "A Claude Code plugin for solo novelists. Integrates with Obsidian vaults for world-building, multi-agent chapter drafting, and a 5-stage critique pipeline with critics, judges, and implementers.",
+  "author": "novel-studio",
+  "commands_dir": "commands",
+  "agents_dir": "agents",
+  "skills_dir": "skills",
+  "hooks_dir": "hooks",
+  "settings_file": "settings.json",
+  "mcp_config": ".mcp.json",
+  "required_env": [
+    "OBSIDIAN_VAULT_PATH"
+  ]
+}

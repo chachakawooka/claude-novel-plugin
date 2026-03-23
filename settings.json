@@ -1,0 +1,29 @@
+{
+  "novel_studio": {
+    "obsidian": {
+      "mcp_server": "obsidian-mcp",
+      "vault_path_env": "OBSIDIAN_VAULT_PATH"
+    },
+    "drafting": {
+      "scene_word_count_min": 800,
+      "scene_word_count_max": 1500,
+      "context_transition_words": 250,
+      "offer_variations": true,
+      "variations_count": 3
+    },
+    "critique_pipeline": {
+      "stages": 5,
+      "critics_per_stage": 3,
+      "judges": 3,
+      "majority_threshold": 2,
+      "max_implementation_attempts": 2,
+      "stage_scopes": {
+        "1": "structure — can add/remove/reorder scenes",
+        "2": "character — scene-level, structure locked",
+        "3": "prose — paragraph-level, character arcs locked",
+        "4": "dialogue — line-level, prose locked",
+        "5": "continuity — read-only audit, no changes"
+      }
+    }
+  }
+}
