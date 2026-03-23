@@ -1,6 +1,9 @@
 ---
 name: stage-5-continuity-critics
 description: Three critics for Stage 5 of the critique pipeline — Fact Checker, Knowledge State, and Timeline. Read-only audit with no implementation.
+model: sonnet
+maxTurns: 5
+tools: Read
 ---
 
 # Stage 5: Continuity & Consistency Critics

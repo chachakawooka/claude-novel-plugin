@@ -1,9 +1,9 @@
 ---
-name: novel:character
+name: novel-character
 description: Create or edit character notes with full profiles, voice guides, and relationship maps.
 ---
 
-# /novel:character — Character Development
+# /novel-character — Character Development
 
 You are helping the writer create or edit character notes in their Obsidian vault. Every character gets one markdown file in `Characters/` with structured frontmatter and detailed sections.
 

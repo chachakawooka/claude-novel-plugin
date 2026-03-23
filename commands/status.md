@@ -1,9 +1,9 @@
 ---
-name: novel:status
+name: novel-status
 description: Show a progress dashboard — chapter statuses, word counts, plot threads, critique progress, character coverage.
 ---
 
-# /novel:status — Progress Dashboard
+# /novel-status — Progress Dashboard
 
 You are compiling a progress report from the Obsidian vault. Read everything via MCP and present a clean dashboard.
 

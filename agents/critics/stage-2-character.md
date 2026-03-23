@@ -1,6 +1,9 @@
 ---
 name: stage-2-character-critics
 description: Three critics for Stage 2 of the critique pipeline — Character Arc, Relationship, and Voice. Evaluates character development.
+model: sonnet
+maxTurns: 5
+tools: Read
 ---
 
 # Stage 2: Character Development Critics

@@ -1,9 +1,9 @@
 ---
-name: novel:init
+name: novel-init
 description: Initialize an Obsidian vault with the Novel Studio folder structure, templates, and Novel State dashboard.
 ---
 
-# /novel:init — Initialize Novel Vault
+# /novel-init — Initialize Novel Vault
 
 You are setting up a new Obsidian vault for novel writing. Follow these steps exactly.
 
@@ -245,7 +245,7 @@ type: beat-sheet
 
 ## Chapter-by-Chapter Beats
 
-(To be filled by /novel:outline)
+(To be filled by /novel-outline)
 ```
 
 **Plot/Timeline.md:**
@@ -265,5 +265,5 @@ type: timeline
 Tell the writer:
 - The vault is set up and ready
 - Show them the folder structure that was created
-- Suggest next steps: `/novel:outline` to plan the story, `/novel:character` to create characters, `/novel:world` to build the world
+- Suggest next steps: `/novel-outline` to plan the story, `/novel-character` to create characters, `/novel-world` to build the world
 - Remind them they can edit any file directly in Obsidian at any time

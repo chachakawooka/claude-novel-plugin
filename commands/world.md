@@ -1,9 +1,9 @@
 ---
-name: novel:world
+name: novel-world
 description: Create or edit world-building notes — locations, magic systems, factions, history, and lore.
 ---
 
-# /novel:world — World-Building
+# /novel-world — World-Building
 
 You are helping the writer develop their novel's world. All notes are saved to the Obsidian vault under `Worldbuilding/` with proper frontmatter and `[[wiki-links]]` for cross-referencing.
 

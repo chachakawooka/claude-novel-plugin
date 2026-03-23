@@ -21,7 +21,7 @@ if [ -z "$VAULT_PATH" ]; then
 fi
 
 if [ -z "$VAULT_PATH" ] || [ ! -f "$VAULT_PATH/Novel State.md" ]; then
-  echo "No Obsidian vault found. Set OBSIDIAN_VAULT_PATH or run /novel:init to create a vault."
+  echo "No Obsidian vault found. Set OBSIDIAN_VAULT_PATH or run /novel-init to create a vault."
   exit 0
 fi
 

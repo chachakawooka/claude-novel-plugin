@@ -9,7 +9,7 @@ A Claude Code plugin for solo novelists. Integrates with Obsidian vaults for wor
    ```bash
    export OBSIDIAN_VAULT_PATH="/path/to/your/vault"
    ```
-3. Run `/novel:init` to create the vault structure
+3. Run `/novel-init` to create the vault structure
 
 ## Requirements
 
@@ -20,13 +20,13 @@ A Claude Code plugin for solo novelists. Integrates with Obsidian vaults for wor
 
 | Command | Description |
 |---------|-------------|
-| `/novel:init` | Initialize vault with folder structure, templates, and dashboard |
-| `/novel:outline` | Generate story structure — premise, act structure, chapter beats, plot threads |
-| `/novel:character` | Create or edit character notes with voice profiles and relationship maps |
-| `/novel:world` | Create or edit world-building — locations, magic, factions, history |
-| `/novel:write` | Draft chapters with multi-agent collaboration, grounded in vault context |
-| `/novel:critique` | Run the 5-stage critique pipeline on a chapter |
-| `/novel:status` | View progress dashboard — chapters, word counts, plot threads, critique status |
+| `/novel-init` | Initialize vault with folder structure, templates, and dashboard |
+| `/novel-outline` | Generate story structure — premise, act structure, chapter beats, plot threads |
+| `/novel-character` | Create or edit character notes with voice profiles and relationship maps |
+| `/novel-world` | Create or edit world-building — locations, magic, factions, history |
+| `/novel-write` | Draft chapters with multi-agent collaboration, grounded in vault context |
+| `/novel-critique` | Run the 5-stage critique pipeline on a chapter |
+| `/novel-status` | View progress dashboard — chapters, word counts, plot threads, critique status |
 
 ## The 5-Stage Critique Pipeline
 

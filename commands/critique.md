@@ -1,9 +1,9 @@
 ---
-name: novel:critique
+name: novel-critique
 description: Run the 5-stage critique pipeline on a chapter — critics, judges, and implementers refine the draft.
 ---
 
-# /novel:critique — 5-Stage Critique Pipeline
+# /novel-critique — 5-Stage Critique Pipeline
 
 You are orchestrating the critique pipeline for a novel chapter. This is the most complex system in the plugin. Follow the orchestration logic exactly.
 

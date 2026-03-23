@@ -1,6 +1,9 @@
 ---
 name: implementation-team
 description: Three implementer agents — Rewriter, Continuity, and Quality Gate. Applies approved changes after judge voting in Stages 1-4.
+model: sonnet
+maxTurns: 10
+tools: Read, Write
 ---
 
 # Implementation Team

@@ -27,7 +27,10 @@ TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 if grep -q "^last-session:" "$STATE_FILE"; then
   sed -i "s/^last-session:.*$/last-session: $TIMESTAMP/" "$STATE_FILE"
 else
-  # Insert before the closing --- of frontmatter
-  sed -i "0,/^---$/! { /^---$/ i\\last-session: $TIMESTAMP
-  }" "$STATE_FILE"
+  # Insert last-session before the closing --- of frontmatter (second --- line)
+  awk -v ts="$TIMESTAMP" '
+    /^---$/ { count++ }
+    count == 2 && /^---$/ { print "last-session: " ts }
+    { print }
+  ' "$STATE_FILE" > "${STATE_FILE}.tmp" && mv "${STATE_FILE}.tmp" "$STATE_FILE"
 fi

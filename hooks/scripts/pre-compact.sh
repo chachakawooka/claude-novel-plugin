@@ -44,7 +44,7 @@ fi
 # Current chapter being worked on (most recently modified in Manuscript/)
 echo "Current work:"
 if [ -d "$VAULT_PATH/Manuscript" ]; then
-  latest=$(find "$VAULT_PATH/Manuscript" -name "*.md" -type f -printf '%T@ %p\n' 2>/dev/null | sort -rn | head -1 | cut -d' ' -f2-)
+  latest=$(find "$VAULT_PATH/Manuscript" -name "*.md" -type f -exec ls -t {} + 2>/dev/null | head -1)
   if [ -n "$latest" ]; then
     echo "  Last modified chapter: $(basename "$latest" .md)"
     status=$(sed -n '/^---$/,/^---$/{ /^status:/{ s/^status: *//; p; } }' "$latest")

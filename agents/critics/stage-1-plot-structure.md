@@ -1,6 +1,9 @@
 ---
 name: stage-1-plot-structure-critics
 description: Three critics for Stage 1 of the critique pipeline — Pacing, Arc, and Scene Necessity. Evaluates plot and structure.
+model: sonnet
+maxTurns: 5
+tools: Read
 ---
 
 # Stage 1: Plot & Structure Critics

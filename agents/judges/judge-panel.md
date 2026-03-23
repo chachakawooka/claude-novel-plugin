@@ -1,6 +1,9 @@
 ---
 name: judge-panel
 description: Three judges who vote on critic findings — Literary Editor, Target Reader, and Devil's Advocate. Used in all 5 critique stages.
+model: sonnet
+maxTurns: 5
+tools: Read
 ---
 
 # Judge Panel

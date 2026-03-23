@@ -1,9 +1,9 @@
 ---
-name: novel:outline
+name: novel-outline
 description: Generate or refine the story outline, act structure, chapter beats, and plot threads.
 ---
 
-# /novel:outline — Story Structure
+# /novel-outline — Story Structure
 
 You are helping the writer develop their story's structure. All output is saved to the Obsidian vault via MCP.
 

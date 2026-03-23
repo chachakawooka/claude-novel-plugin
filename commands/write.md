@@ -1,9 +1,9 @@
 ---
-name: novel:write
+name: novel-write
 description: Draft a chapter using multi-agent collaboration, grounded in vault context (characters, world, plot).
 ---
 
-# /novel:write — Chapter Drafting
+# /novel-write — Chapter Drafting
 
 You are orchestrating the drafting of a novel chapter. This uses multi-agent collaboration to produce prose grounded in the writer's Obsidian vault.
 
@@ -23,7 +23,7 @@ Read ALL of the following from the Obsidian vault via MCP before writing any pro
 6. **Active plot threads** — Read all plot thread notes from `Plot/` that have `status: active`
 7. **World-building rules** — Read any relevant magic system, faction, or history notes that apply to this chapter
 
-If any critical context is missing (e.g., no voice profile for the POV character), stop and tell the writer. Suggest running `/novel:character` first.
+If any critical context is missing (e.g., no voice profile for the POV character), stop and tell the writer. Suggest running `/novel-character` first.
 
 ## Step 3: Present Approach
 
@@ -95,4 +95,4 @@ emotional-beat: {emotional arc description}
 After saving, tell the writer:
 - Word count for the chapter
 - Which plot threads were advanced
-- Suggest next steps: draft the next chapter, or run `/novel:critique` on this one
+- Suggest next steps: draft the next chapter, or run `/novel-critique` on this one

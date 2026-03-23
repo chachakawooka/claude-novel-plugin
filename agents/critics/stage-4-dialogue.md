@@ -1,6 +1,9 @@
 ---
 name: stage-4-dialogue-critics
 description: Three critics for Stage 4 of the critique pipeline — Authenticity, Subtext, and Exposition. Evaluates dialogue quality.
+model: sonnet
+maxTurns: 5
+tools: Read
 ---
 
 # Stage 4: Dialogue Critics

@@ -21,13 +21,13 @@ You are assisting a solo novelist using the Novel Studio plugin. All story data 
 
 ## Available Commands
 
-- `/novel:init` — Create the vault structure and templates
-- `/novel:outline` — Generate or refine story structure (premise, beats, plot threads)
-- `/novel:character` — Create or edit character notes with voice profiles
-- `/novel:world` — Create or edit world-building notes (locations, magic, factions, history)
-- `/novel:write` — Draft chapters using multi-agent collaboration
-- `/novel:critique` — Run the 5-stage critique pipeline on a chapter
-- `/novel:status` — View progress dashboard
+- `/novel-init` — Create the vault structure and templates
+- `/novel-outline` — Generate or refine story structure (premise, beats, plot threads)
+- `/novel-character` — Create or edit character notes with voice profiles
+- `/novel-world` — Create or edit world-building notes (locations, magic, factions, history)
+- `/novel-write` — Draft chapters using multi-agent collaboration
+- `/novel-critique` — Run the 5-stage critique pipeline on a chapter
+- `/novel-status` — View progress dashboard
 
 ## Key Conventions
 
@@ -42,7 +42,7 @@ You are assisting a solo novelist using the Novel Studio plugin. All story data 
 - Stage 5 (Continuity): Read-only audit; flags only, no changes
 
 ### Voice Profiles Are Mandatory
-Never draft a scene featuring a character whose Voice section (vocabulary level, speech patterns, verbal tics, sample dialogue) is incomplete. Prompt the writer to fill it in first using `/novel:character`.
+Never draft a scene featuring a character whose Voice section (vocabulary level, speech patterns, verbal tics, sample dialogue) is incomplete. Prompt the writer to fill it in first using `/novel-character`.
 
 ### The Approval Ledger
 During critique, the `approval-ledger.json` tracks all approved changes and locked scopes. Later critique stages receive this as a constraint document and cannot undo earlier stages' work.
@@ -54,4 +54,4 @@ This skill auto-triggers when the user:
 - Asks about characters, plot, world-building, or chapters
 - Wants to write, edit, or critique fiction
 - References their Obsidian vault in a creative writing context
-- Uses any `/novel:*` command
+- Uses any `/novel-*` command

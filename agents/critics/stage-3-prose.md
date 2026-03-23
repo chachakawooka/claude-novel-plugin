@@ -1,6 +1,9 @@
 ---
 name: stage-3-prose-critics
 description: Three critics for Stage 3 of the critique pipeline — Craft, Show-Don't-Tell, and Sensory. Evaluates prose quality.
+model: sonnet
+maxTurns: 5
+tools: Read
 ---
 
 # Stage 3: Prose Quality Critics
