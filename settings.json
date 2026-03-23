@@ -11,6 +11,18 @@
       "offer_variations": true,
       "variations_count": 3
     },
+    "validation_pipeline": {
+      "stages": 3,
+      "validators_per_stage": 3,
+      "judges": 3,
+      "majority_threshold": 2,
+      "block_on_critical": true,
+      "stage_domains": {
+        "A": "narrative-architecture — plot holes, stakes, pacing",
+        "B": "character-readiness — arcs, voice, relationships",
+        "C": "world-consistency — rules, timeline, settings"
+      }
+    },
     "critique_pipeline": {
       "stages": 5,
       "critics_per_stage": 3,

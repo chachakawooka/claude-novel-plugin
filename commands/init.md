@@ -39,11 +39,19 @@ Plot/
   Outline.md
   Beat Sheet.md
   Timeline.md
+  Concept.md
+  Conflict Web.md
+  Stakes Map.md
 Critique/
+  Pre-Writing/
 Templates/
   Character Template.md
   Location Template.md
   Scene Template.md
+  Concept Template.md
+  Conflict Web Template.md
+  Stakes Map Template.md
+  Research Brief Template.md
 Research/
 Novel State.md
 ```
@@ -144,6 +152,121 @@ emotional-beat:
 ---
 ```
 
+### Concept Template (`Templates/Concept Template.md`)
+
+```yaml
+---
+type: concept
+variation:
+genre-analysis-complete: false
+thematic-framework-complete: false
+---
+```
+
+Body sections:
+```markdown
+## Selected Concept
+
+
+## Core Question
+
+
+## Genre Expectations
+
+
+## Comparable Titles
+
+
+## Key "What If?" Insights
+
+
+## Thematic Framework
+- **Central theme**:
+- **Counter-theme**:
+- **Protagonist thematic question**:
+- **Antagonist thematic question**:
+```
+
+### Conflict Web Template (`Templates/Conflict Web Template.md`)
+
+```yaml
+---
+type: conflict-web
+---
+```
+
+Body sections:
+```markdown
+## Primary Conflict
+### External
+
+### Internal
+
+### Mirror (How external and internal amplify each other)
+
+## Secondary Conflicts
+
+## Thematic Conflict
+```
+
+### Stakes Map Template (`Templates/Stakes Map Template.md`)
+
+```yaml
+---
+type: stakes-map
+---
+```
+
+Body sections:
+```markdown
+## Act 1 Stakes
+- **What can be lost**:
+- **Why the reader cares**:
+- **Cost of failure**:
+
+## Act 2 Stakes
+- **Escalation from personal → interpersonal → larger**:
+- **Midpoint shift**:
+- **All-is-lost moment**:
+
+## Act 3 Stakes
+- **Climax stakes**:
+- **Required sacrifice**:
+- **Connection to internal conflict**:
+```
+
+### Research Brief Template (`Templates/Research Brief Template.md`)
+
+```yaml
+---
+type: research-brief
+category:
+relevance: []
+priority:
+chapters: []
+---
+```
+
+Body sections:
+```markdown
+## Overview
+
+
+## Key Facts
+
+
+## Common Pitfalls
+
+
+## Specific Details for Prose
+
+
+## Terminology Guide
+
+
+## Story Integration Notes
+```
+
 ## Step 4: Create Novel State.md
 
 Create `Novel State.md` at the vault root with the writer's answers:
@@ -193,6 +316,14 @@ WHERE type = "plot-thread"
 SORT importance ASC
 ```
 
+### Research Briefs
+```dataview
+TABLE category, priority, relevance
+FROM "Research"
+WHERE type = "research-brief"
+SORT priority ASC
+```
+
 ### Critique Pipeline
 ```dataview
 TABLE stages-completed, status
@@ -201,9 +332,48 @@ SORT file.name ASC
 ```
 ````
 
-## Step 5: Create Initial Plot Files
+## Step 5: Create Initial Plot and Research Files
 
 Create empty starter files:
+
+**Plot/Concept.md:**
+```yaml
+---
+type: concept
+variation:
+genre-analysis-complete: false
+thematic-framework-complete: false
+---
+```
+```markdown
+# Concept
+
+(To be filled by /novel-ideate)
+```
+
+**Plot/Conflict Web.md:**
+```yaml
+---
+type: conflict-web
+---
+```
+```markdown
+# Conflict Web
+
+(To be filled by /novel-ideate)
+```
+
+**Plot/Stakes Map.md:**
+```yaml
+---
+type: stakes-map
+---
+```
+```markdown
+# Stakes Map
+
+(To be filled by /novel-ideate)
+```
 
 **Plot/Outline.md:**
 ```yaml
@@ -265,5 +435,5 @@ type: timeline
 Tell the writer:
 - The vault is set up and ready
 - Show them the folder structure that was created
-- Suggest next steps: `/novel-outline` to plan the story, `/novel-character` to create characters, `/novel-world` to build the world
+- Suggest next steps: `/novel-ideate` to explore the concept in depth, then `/novel-outline` to plan the structure, `/novel-character` to create characters, `/novel-world` to build the world
 - Remind them they can edit any file directly in Obsidian at any time

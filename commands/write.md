@@ -22,6 +22,7 @@ Read ALL of the following from the Obsidian vault via MCP before writing any pro
 5. **Previous chapter ending** — Read the last 200-300 words of the previous chapter from `Manuscript/` for transition flow
 6. **Active plot threads** — Read all plot thread notes from `Plot/` that have `status: active`
 7. **World-building rules** — Read any relevant magic system, faction, or history notes that apply to this chapter
+8. **Research briefs** — Read all research briefs from `Research/` where the `relevance` field links to characters, locations, or systems appearing in this chapter. Also load any briefs where the `chapters` field includes this chapter number. Use these for factual accuracy, authentic details, and genre-appropriate prose.
 
 If any critical context is missing (e.g., no voice profile for the POV character), stop and tell the writer. Suggest running `/novel-character` first.
 
@@ -45,6 +46,7 @@ Key principles:
 - **Show, don't tell** — dramatize emotions through action and dialogue
 - **Dialogue matches voice profiles** — each character should sound distinct per their Voice section
 - **Maintain continuity** — respect character Knowledge States, world rules, timeline
+- **Weave in research** — use specific details from research briefs to add authenticity (terminology, sensory details, profession-specific behaviors), but integrate naturally — never info-dump
 
 Compose the full chapter from its constituent scenes.
 

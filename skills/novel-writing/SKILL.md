@@ -22,14 +22,20 @@ You are assisting a solo novelist using the Novel Studio plugin. All story data 
 ## Available Commands
 
 - `/novel-init` — Create the vault structure and templates
+- `/novel-ideate` — Deep concept exploration (concept variations, conflict web, stakes map, thematic framework)
 - `/novel-outline` — Generate or refine story structure (premise, beats, plot threads)
 - `/novel-character` — Create or edit character notes with voice profiles
 - `/novel-world` — Create or edit world-building notes (locations, magic, factions, history)
+- `/novel-research` — Generate structured research briefs for factual accuracy and genre conventions
+- `/novel-validate` — Run the 3-stage pre-writing QA pipeline (narrative architecture, character readiness, world consistency)
 - `/novel-write` — Draft chapters using multi-agent collaboration
 - `/novel-critique` — Run the 5-stage critique pipeline on a chapter
 - `/novel-status` — View progress dashboard
 
 ## Key Conventions
+
+### Novel Phase Flow
+`ideation` → `outlining` → `world-building` → `researching` → `validated` → `drafting` → `critique` → `editing`
 
 ### Chapter Status Flow
 `draft` → `stage-1` → `stage-2` → `stage-3` → `stage-4` → `stage-5` → `approved`
@@ -40,6 +46,14 @@ You are assisting a solo novelist using the Novel Studio plugin. All story data 
 - Stage 3 (Prose): Paragraph-level prose changes; character arcs locked
 - Stage 4 (Dialogue): Line-level dialogue changes; prose locked
 - Stage 5 (Continuity): Read-only audit; flags only, no changes
+
+### Pre-Writing Validation Pipeline
+Before drafting begins, `/novel-validate` runs a 3-stage QA pipeline:
+- Stage A (Narrative Architecture): Plot holes, stakes/tension, pacing forecast
+- Stage B (Character Readiness): Arc completeness, voice profiles, relationship web
+- Stage C (World Consistency): Rule systems, timeline feasibility, setting coverage
+
+Each stage uses 3 validators + 3 judges (same judge panel as post-writing critique). Critical findings block writing; major/minor findings produce warnings. Results are saved in `Critique/Pre-Writing/`.
 
 ### Voice Profiles Are Mandatory
 Never draft a scene featuring a character whose Voice section (vocabulary level, speech patterns, verbal tics, sample dialogue) is incomplete. Prompt the writer to fill it in first using `/novel-character`.
