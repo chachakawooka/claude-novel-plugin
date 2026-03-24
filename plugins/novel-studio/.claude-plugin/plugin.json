@@ -6,7 +6,24 @@
     "name": "chachakawooka"
   },
   "commands": "./commands/",
-  "agents": "./agents/",
+  "agents": [
+    "./agents/critics/stage-1-plot-structure.md",
+    "./agents/critics/stage-2-character.md",
+    "./agents/critics/stage-3-prose.md",
+    "./agents/critics/stage-4-dialogue.md",
+    "./agents/critics/stage-5-continuity.md",
+    "./agents/implementers/implementation-team.md",
+    "./agents/judges/judge-panel.md",
+    "./agents/validators/stage-a-pacing.md",
+    "./agents/validators/stage-a-plot-holes.md",
+    "./agents/validators/stage-a-stakes-tension.md",
+    "./agents/validators/stage-b-arc-completeness.md",
+    "./agents/validators/stage-b-relationships.md",
+    "./agents/validators/stage-b-voice-audit.md",
+    "./agents/validators/stage-c-rules.md",
+    "./agents/validators/stage-c-settings.md",
+    "./agents/validators/stage-c-timeline.md"
+  ],
   "skills": "./skills/",
   "hooks": "./hooks/hooks.json",
   "mcpServers": "./.mcp.json"
