@@ -1,0 +1,26 @@
+{
+  "name": "novel-studio-marketplace",
+  "owner": {
+    "name": "chachakawooka"
+  },
+  "metadata": {
+    "description": "A marketplace of Claude Code plugins for creative writing, fiction, and novel development.",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "novel-studio",
+      "source": "./plugins/novel-studio",
+      "description": "A comprehensive plugin for solo novelists. Integrates with Obsidian vaults for deep ideation, research, world-building, multi-agent chapter drafting, a 3-stage pre-writing validation pipeline, and a 5-stage critique pipeline with critics, judges, and implementers.",
+      "version": "1.0.0",
+      "author": {
+        "name": "chachakawooka"
+      },
+      "license": "MIT",
+      "keywords": ["novel", "fiction", "writing", "obsidian", "critique", "world-building", "creative-writing"],
+      "category": "creative-writing",
+      "tags": ["novel", "fiction", "obsidian", "drafting", "critique-pipeline"]
+    }
+  ]
+}

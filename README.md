@@ -1,22 +1,42 @@
-# Novel Studio — Claude Code Plugin
+# Novel Studio Marketplace
 
-A Claude Code plugin for solo novelists. Integrates with Obsidian vaults for world-building, multi-agent chapter drafting, and a 5-stage critique pipeline.
+A Claude Code plugin marketplace for creative writing and novel development.
 
-## Setup
+## Installation
 
-1. Install the plugin in Claude Code
+Add this marketplace to Claude Code:
+
+```shell
+/plugin marketplace add chachakawooka/claude-novel-plugin
+```
+
+Then install the plugin:
+
+```shell
+/plugin install novel-studio@novel-studio-marketplace
+```
+
+## Available Plugins
+
+### novel-studio
+
+A comprehensive plugin for solo novelists. Integrates with Obsidian vaults for deep ideation, research, world-building, multi-agent chapter drafting, a 3-stage pre-writing validation pipeline, and a 5-stage critique pipeline with critics, judges, and implementers.
+
+**Setup:**
+
+1. Install the plugin (see above)
 2. Set your Obsidian vault path:
    ```bash
    export OBSIDIAN_VAULT_PATH="/path/to/your/vault"
    ```
 3. Run `/novel-init` to create the vault structure
 
-## Requirements
+**Requirements:**
 
 - An Obsidian vault (or a directory where one will be created)
 - Node.js (for the Obsidian MCP server via `npx`)
 
-## Commands
+**Commands:**
 
 | Command | Description |
 |---------|-------------|
@@ -31,28 +51,19 @@ A Claude Code plugin for solo novelists. Integrates with Obsidian vaults for wor
 | `/novel-critique` | Run the 5-stage critique pipeline on a chapter |
 | `/novel-status` | View progress dashboard — chapters, word counts, plot threads, critique status |
 
-## The 5-Stage Critique Pipeline
+**The 5-Stage Critique Pipeline:**
 
-The core differentiator. Each stage has a progressively narrower scope:
-
-| Stage | Focus | Scope | Critics |
-|-------|-------|-------|---------|
-| 1 | Plot & Structure | Can restructure scenes | Pacing, Arc, Scene Necessity |
-| 2 | Character Development | Scene-level; structure locked | Character Arc, Relationship, Voice |
-| 3 | Prose Quality | Paragraph-level; characters locked | Craft, Show-Don't-Tell, Sensory |
-| 4 | Dialogue | Line-level; prose locked | Authenticity, Subtext, Exposition |
-| 5 | Continuity | Read-only audit | Fact Checker, Knowledge State, Timeline |
+| Stage | Focus | Scope |
+|-------|-------|-------|
+| 1 | Plot & Structure | Can restructure scenes |
+| 2 | Character Development | Scene-level; structure locked |
+| 3 | Prose Quality | Paragraph-level; characters locked |
+| 4 | Dialogue | Line-level; prose locked |
+| 5 | Continuity | Read-only audit |
 
 Each stage runs: **3 Critics** (parallel) → **3 Judges** (parallel vote) → **3 Implementers** (parallel, except Stage 5).
 
-The three judges:
-- **Literary Editor** — Evaluates craft quality and literary merit
-- **Target Reader** — Evaluates engagement and emotional impact
-- **Devil's Advocate** — Argues for preserving the original text; prevents over-editing
-
-## The 3-Stage Pre-Writing Validation Pipeline
-
-Before any chapter drafting begins, `/novel-validate` runs a QA pipeline that catches structural, character, and world-building issues early:
+**The 3-Stage Pre-Writing Validation Pipeline:**
 
 | Stage | Focus | Validators |
 |-------|-------|-----------|
@@ -60,34 +71,26 @@ Before any chapter drafting begins, `/novel-validate` runs a QA pipeline that ca
 | B | Character Readiness | Arc Completeness, Voice Profile Auditor, Relationship Web |
 | C | World Consistency | Rule System Auditor, Timeline Feasibility, Setting Coverage |
 
-Each stage runs: **3 Validators** (parallel) → **3 Judges** (parallel vote) → **Readiness Report**.
+## Contributing
 
-Critical findings block writing. The same three judges (Literary Editor, Target Reader, Devil's Advocate) evaluate validator findings.
+To add a new plugin to this marketplace:
 
-## Architecture
+1. Create a directory under `plugins/` with a `.claude-plugin/plugin.json` manifest
+2. Add the plugin entry to `.claude-plugin/marketplace.json`
+3. Submit a pull request
 
-- **Obsidian vault** is the single source of truth — all state is markdown + YAML frontmatter
-- **Obsidian MCP server** provides read/write access to the vault
-- **Subagents** handle parallel drafting and critique (up to 10 concurrent)
-- **Approval ledger** enforces scope narrowing across critique stages
-- **Hooks** auto-load vault context on session start and preserve state during compaction
-
-## Vault Structure
+## Directory Structure
 
 ```
-YourVault/
-├── Manuscript/          # Chapters organized by act
-├── Characters/          # One note per character with voice profiles
-├── Worldbuilding/       # Locations, magic, factions, history
-├── Plot/                # Outline, beat sheet, timeline, plot threads
-│   ├── Outline.md       # Story structure and chapter beats
-│   ├── Concept.md       # Core concept from ideation
-│   ├── Conflict Web.md  # Conflict relationships
-│   └── Stakes Map.md    # Stakes escalation map
-├── Critique/            # Critique pipeline output per chapter
-│   ├── Chapter-*/       # Per-chapter critique stages
-│   └── Pre-Writing/     # Pre-writing validation reports
-├── Templates/           # Note templates for characters, locations, scenes
-├── Research/            # Structured research briefs
-└── Novel State.md       # Dashboard with Dataview queries
+.claude-plugin/
+  marketplace.json          # Marketplace catalog
+plugins/
+  novel-studio/             # Novel writing plugin
+    .claude-plugin/
+      plugin.json           # Plugin manifest
+    agents/                 # Critic, judge, validator, and implementer agents
+    commands/               # Slash commands (/novel-init, /novel-write, etc.)
+    hooks/                  # Session lifecycle hooks
+    skills/                 # Auto-activating skills
+    settings.json           # Plugin configuration
 ```
