@@ -80,8 +80,14 @@ YourVault/
 ├── Characters/          # One note per character with voice profiles
 ├── Worldbuilding/       # Locations, magic, factions, history
 ├── Plot/                # Outline, beat sheet, timeline, plot threads
+│   ├── Outline.md       # Story structure and chapter beats
+│   ├── Concept.md       # Core concept from ideation
+│   ├── Conflict Web.md  # Conflict relationships
+│   └── Stakes Map.md    # Stakes escalation map
 ├── Critique/            # Critique pipeline output per chapter
+│   ├── Chapter-*/       # Per-chapter critique stages
+│   └── Pre-Writing/     # Pre-writing validation reports
 ├── Templates/           # Note templates for characters, locations, scenes
-├── Research/            # Reference material
+├── Research/            # Structured research briefs
 └── Novel State.md       # Dashboard with Dataview queries
 ```

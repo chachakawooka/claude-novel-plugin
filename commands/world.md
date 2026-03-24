@@ -105,3 +105,7 @@ After creating any world-building note:
 ## Step 5: Consistency Check
 
 Before saving, review the new note against existing world-building for contradictions. Flag any inconsistencies to the writer.
+
+## Step 6: Phase Transition
+
+If `Novel State.md` phase is `ideation` or `outlining`, update it to `world-building`. Do not regress the phase if it is already at a later stage (e.g., `researching`, `validated`, `drafting`).
