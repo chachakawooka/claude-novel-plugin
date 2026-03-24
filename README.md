@@ -21,9 +21,12 @@ A Claude Code plugin for solo novelists. Integrates with Obsidian vaults for wor
 | Command | Description |
 |---------|-------------|
 | `/novel-init` | Initialize vault with folder structure, templates, and dashboard |
+| `/novel-ideate` | Deep concept exploration — variations, conflict web, stakes map, thematic framework |
 | `/novel-outline` | Generate story structure — premise, act structure, chapter beats, plot threads |
 | `/novel-character` | Create or edit character notes with voice profiles and relationship maps |
 | `/novel-world` | Create or edit world-building — locations, magic, factions, history |
+| `/novel-research` | Generate structured research briefs for accuracy and genre conventions |
+| `/novel-validate` | Run the 3-stage pre-writing QA pipeline before drafting |
 | `/novel-write` | Draft chapters with multi-agent collaboration, grounded in vault context |
 | `/novel-critique` | Run the 5-stage critique pipeline on a chapter |
 | `/novel-status` | View progress dashboard — chapters, word counts, plot threads, critique status |
@@ -47,6 +50,20 @@ The three judges:
 - **Target Reader** — Evaluates engagement and emotional impact
 - **Devil's Advocate** — Argues for preserving the original text; prevents over-editing
 
+## The 3-Stage Pre-Writing Validation Pipeline
+
+Before any chapter drafting begins, `/novel-validate` runs a QA pipeline that catches structural, character, and world-building issues early:
+
+| Stage | Focus | Validators |
+|-------|-------|-----------|
+| A | Narrative Architecture | Plot Hole Detector, Stakes & Tension Auditor, Pacing Forecaster |
+| B | Character Readiness | Arc Completeness, Voice Profile Auditor, Relationship Web |
+| C | World Consistency | Rule System Auditor, Timeline Feasibility, Setting Coverage |
+
+Each stage runs: **3 Validators** (parallel) → **3 Judges** (parallel vote) → **Readiness Report**.
+
+Critical findings block writing. The same three judges (Literary Editor, Target Reader, Devil's Advocate) evaluate validator findings.
+
 ## Architecture
 
 - **Obsidian vault** is the single source of truth — all state is markdown + YAML frontmatter
@@ -63,8 +80,14 @@ YourVault/
 ├── Characters/          # One note per character with voice profiles
 ├── Worldbuilding/       # Locations, magic, factions, history
 ├── Plot/                # Outline, beat sheet, timeline, plot threads
+│   ├── Outline.md       # Story structure and chapter beats
+│   ├── Concept.md       # Core concept from ideation
+│   ├── Conflict Web.md  # Conflict relationships
+│   └── Stakes Map.md    # Stakes escalation map
 ├── Critique/            # Critique pipeline output per chapter
+│   ├── Chapter-*/       # Per-chapter critique stages
+│   └── Pre-Writing/     # Pre-writing validation reports
 ├── Templates/           # Note templates for characters, locations, scenes
-├── Research/            # Reference material
+├── Research/            # Structured research briefs
 └── Novel State.md       # Dashboard with Dataview queries
 ```

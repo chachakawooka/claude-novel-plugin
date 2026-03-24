@@ -13,6 +13,9 @@ Read from the Obsidian vault via MCP:
 - `Novel State.md` — title, genre, target chapters, POV, tense
 - `Plot/Outline.md` — any existing premise, logline, theme
 - `Plot/Beat Sheet.md` — any existing chapter beats
+- `Plot/Concept.md` — concept variation, genre analysis, thematic framework (from `/novel-ideate`)
+- `Plot/Conflict Web.md` — mapped conflicts (from `/novel-ideate`)
+- `Plot/Stakes Map.md` — stakes escalation plan (from `/novel-ideate`)
 - All files in `Plot/` — existing plot thread notes
 - All files in `Characters/` — existing character notes (for character-driven plotting)
 
@@ -27,7 +30,9 @@ Check what already exists:
 
 ### If Starting Fresh
 
-Ask the writer to describe their story concept in a few sentences. Then generate:
+If ideation outputs exist (`Plot/Concept.md`, `Plot/Conflict Web.md`, `Plot/Stakes Map.md`), use them as the foundation — the concept, conflicts, stakes escalation, and thematic framework should directly inform the premise, logline, and structure. Do not re-ask for the story concept if ideation has been completed.
+
+If no ideation outputs exist, ask the writer to describe their story concept in a few sentences (and suggest running `/novel-ideate` first for deeper exploration). Then generate:
 
 1. **Premise** — One paragraph describing the core conflict
 2. **Logline** — One sentence (character + goal + obstacle + stakes)
@@ -45,6 +50,8 @@ Generate a 3-act structure:
 Save to `Plot/Outline.md` under the Act Structure heading.
 
 ### Chapter-by-Chapter Beat Sheet
+
+If the Conflict Web exists, use it to ensure every mapped conflict surfaces in the appropriate chapters. If the Stakes Map exists, use it to verify stakes escalate as planned across acts.
 
 For each chapter, generate:
 - **Chapter number and title**
@@ -66,9 +73,9 @@ For each major storyline, create a separate note in `Plot/`:
 ```yaml
 ---
 type: plot-thread
-status: active
-introduced: {chapter number}
-resolved:
+status: active | resolved | stalled
+introduced: {chapter number where thread first appears, integer}
+resolved: {chapter number where thread resolves, integer — leave empty if unresolved}
 importance: major | minor | subplot
 ---
 ```

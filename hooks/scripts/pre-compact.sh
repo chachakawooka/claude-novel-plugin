@@ -52,6 +52,20 @@ if [ -d "$VAULT_PATH/Manuscript" ]; then
   fi
 fi
 
+# Pre-writing foundation status
+echo "Pre-writing:"
+if [ -f "$VAULT_PATH/Plot/Concept.md" ]; then
+  echo "  Ideation: completed"
+else
+  echo "  Ideation: not started"
+fi
+
+if [ -f "$VAULT_PATH/Critique/Pre-Writing/readiness-report.md" ]; then
+  echo "  Validation: completed"
+else
+  echo "  Validation: not run"
+fi
+
 # Active critique stage
 echo "Active critiques:"
 if [ -d "$VAULT_PATH/Critique" ]; then
@@ -60,7 +74,7 @@ if [ -d "$VAULT_PATH/Critique" ]; then
       ledger="$critique_dir/approval-ledger.json"
       if [ -f "$ledger" ]; then
         chapter_name=$(basename "$critique_dir")
-        stages_done=$(grep -o '"stages_completed": *[0-9]*' "$ledger" | grep -o '[0-9]*' || echo "0")
+        stages_done=$(python3 -c "import json,sys; print(json.load(open(sys.argv[1])).get('stages_completed',0))" "$ledger" 2>/dev/null || grep -o '"stages_completed": *[0-9]*' "$ledger" 2>/dev/null | grep -o '[0-9]*' || echo "0")
         if [ "$stages_done" -lt 5 ] 2>/dev/null; then
           echo "  $chapter_name — in progress at stage $((stages_done + 1))"
         fi

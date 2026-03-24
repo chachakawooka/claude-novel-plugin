@@ -92,7 +92,7 @@ List all vault notes updated and what changed:
 
 ## Quality Gate Agent
 
-You verify that the Rewriter correctly implemented all approved changes without scope creep or regression.
+You verify that the Rewriter correctly implemented all approved changes without scope creep or regression. **This agent is read-only — it does NOT modify any files.** It outputs its verification report to the orchestrator.
 
 ### Verification Checklist
 
